@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <tetris.h>
+#include "tetris.h"
 #include <termios.h>
 #include <signal.h>
 #include <time.h>
@@ -193,7 +193,7 @@ tetris_rotate(struct tetris *t) {
     struct tetris_block b=t->current;
     struct tetris_block s=b;
     int x,y;
-    b.w=s.h;ы
+    b.w=s.h;
     b.h=s.w;
     for (x=0; x<s.w; x++)
         for (y=0; y<s.h; y++) {
